@@ -1,0 +1,21 @@
+stages:
+  - Build
+  # - Publish
+
+Build:
+  image: node:latest
+  stage: Build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+# Publish: If you want to deploy a static build to your FTP instead of using Netlify. Set ENV vars in Gitlab then...
+#     stage: Publish
+#     script:
+#         - apt-get update
+#         - apt-get install lftp
+#         - lftp -e "set ssl:verify-certificate no; lcd build; mirror -R --target-directory=www" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
+#     only:
+#         - master
