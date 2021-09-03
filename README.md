@@ -15,8 +15,8 @@ Your TODOs:
 
 -   change `name` in package.json to your project name
 -   check & replace all occurences of 'TODO' in this project for customization & setup
--   use <https://realfavicongenerator.net/> to generate your favicons and put the output in /static. Override existing images
--   verify sitemap logic and paths in
+-   use <https://realfavicongenerator.net/> to generate your favicons and put the output in /static. Override existing images.
+-   verify sitemap logic and paths in src/sitemap.xml.ts
 
 ## Developing
 
