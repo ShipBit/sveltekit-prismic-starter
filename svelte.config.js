@@ -8,9 +8,6 @@ const config = {
 	preprocess: [
 		// see https://github.com/sveltejs/svelte-preprocess
 		sveltePreprocess({
-			defaults: {
-				style: 'scss'
-			},
 			scss: {
 				includePaths: ['src'],
 				outputStyle: 'compressed'
@@ -32,7 +29,7 @@ const config = {
 		}),
 		prerender: {
 			enabled: true,
-			pages: ['*']
+			entries: ['*']
 		}
 	}
 };
