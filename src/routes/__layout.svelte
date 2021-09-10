@@ -41,6 +41,6 @@
 	$: if ($pageStore) registerMatomo();
 </script>
 
-<Matomo {MATOMO_URL} {MATOMO_SITE_ID} />
+<Matomo url={MATOMO_URL} siteId={MATOMO_SITE_ID} />
 
 <slot />
