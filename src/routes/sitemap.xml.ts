@@ -25,7 +25,6 @@ export async function get(): Promise<EndpointOutput> {
 	};
 }
 
-// TODO: add lastmod from CI build time?
 const render = (staticPages: Array<string>) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -47,7 +46,7 @@ ${staticPages
 		(page: string) => `
   <url>
     <loc>${page}/</loc>
-    <priority>${page.endsWith('datenschutz') || page.endsWith('impressum') ? 0.5 : 0.85}</priority>
+    <priority>0.85</priority>
   </url>`
 	)
 	.join('\n')}
